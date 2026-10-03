@@ -1,0 +1,29 @@
+{
+  "slug": "inventory-reorder-point-evidence-checker",
+  "title": "Inventory Reorder Point Evidence Checker",
+  "category": "supply-chain",
+  "description": "Check reorder point decisions against lead time, demand evidence, and safety stock policy.",
+  "fields": {
+    "sku": {
+      "label": "sku",
+      "kind": "required",
+      "minimum": 0
+    },
+    "lead_time_days": {
+      "label": "lead time days",
+      "kind": "number",
+      "minimum": 1
+    },
+    "demand_history": {
+      "label": "demand history",
+      "kind": "list",
+      "minimum": 1
+    },
+    "safety_stock_policy": {
+      "label": "safety stock policy",
+      "kind": "required",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

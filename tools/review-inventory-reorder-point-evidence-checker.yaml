@@ -1,0 +1,59 @@
+{
+  "name": "review-inventory-reorder-point-evidence-checker",
+  "description": "Run Inventory Reorder Point Evidence Checker",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "sku": {
+            "type": "string",
+            "description": "sku"
+          },
+          "lead_time_days": {
+            "type": "number",
+            "description": "lead time days"
+          },
+          "demand_history": {
+            "type": "array",
+            "description": "demand history"
+          },
+          "safety_stock_policy": {
+            "type": "string",
+            "description": "safety stock policy"
+          }
+        },
+        "required": [
+          "sku",
+          "lead_time_days",
+          "demand_history",
+          "safety_stock_policy"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-inventory-reorder-point-evidence-checker.py",
+    "runtime": "python3"
+  }
+}

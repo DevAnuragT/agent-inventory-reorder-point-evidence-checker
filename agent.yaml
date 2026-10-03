@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: inventory-reorder-point-evidence-checker
+version: 0.1.0
+description: Check reorder point decisions against lead time, demand evidence, and safety stock policy.
+skills:
+  - inventory-reorder-point-evidence-checker-skill
+tools:
+  - review-inventory-reorder-point-evidence-checker
+tags:
+  - supply-chain
+  - evidence-driven

@@ -1,0 +1,8 @@
+{
+  "sku": "evidence-record",
+  "lead_time_days": 1,
+  "demand_history": [
+    "record-1"
+  ],
+  "safety_stock_policy": "evidence-record"
+}
